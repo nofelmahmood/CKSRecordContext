@@ -16,6 +16,7 @@ class CKRecordContext: NSObject {
     var deletedRecords:Array<CKRecordID> = Array<CKRecordID>()
     var modifiedRecords:Array<CKRecord> = Array<CKRecord>()
     var database:CKDatabase?
+    var recordsZone:CKRecordZone?
     
     /**
     Initializes the context with an instance of CKDatabase.
