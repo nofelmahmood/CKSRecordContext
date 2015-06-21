@@ -11,6 +11,7 @@ import CloudKit
 
 class CKRecordContext: NSObject {
    
+    var operationQueue:NSOperationQueue = NSOperationQueue()
     var ckModifyRecordsOperation:CKModifyRecordsOperation?
     var deletedRecords:Array<CKRecordID> = Array<CKRecordID>()
     var modifiedRecords:Array<CKRecord> = Array<CKRecord>()
@@ -25,9 +26,18 @@ class CKRecordContext: NSObject {
         self.deletedRecords.append(record.recordID)
     }
     
-    func save(error:NSError)
+    func save(error:NSErrorPointer)
     {
-        
+        self.ckModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: self.modifiedRecords, recordIDsToDelete: self.deletedRecords)
+        self.ckModifyRecordsOperation?.modifyRecordsCompletionBlock = ({(savedRecords, deletedRecordsIDs, operationError) -> Void in
+            
+            if operationError != nil
+            {
+                error.memory = operationError
+            }
+        })
+        self.operationQueue.addOperation(self.ckModifyRecordsOperation!)
+        self.operationQueue.waitUntilAllOperationsAreFinished()
     }
     
 }
