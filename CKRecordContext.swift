@@ -35,11 +35,6 @@ class CKRecordContext: NSObject {
         return ckRecord
     }
     
-    func addRecord(record:CKRecord)
-    {
-        self.modifiedRecords.append(record)
-    }
-    
     func deleteRecord(record:CKRecord)
     {
         self.deletedRecords.append(record.recordID)
