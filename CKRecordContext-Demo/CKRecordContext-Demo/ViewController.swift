@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import CloudKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var recordContext = CKRecordContext()
+        var recordContext = CKRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase)
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }

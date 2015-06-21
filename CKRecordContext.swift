@@ -46,6 +46,12 @@ class CKRecordContext: NSObject {
         self.deletedRecords.append(record.recordID)
     }
     
+    func reset()
+    {
+        self.modifiedRecords.removeAll(keepCapacity: false)
+        self.deletedRecords.removeAll(keepCapacity: false)
+    }
+    
     func save(error:NSErrorPointer)
     {
         self.ckModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: self.modifiedRecords, recordIDsToDelete: self.deletedRecords)
