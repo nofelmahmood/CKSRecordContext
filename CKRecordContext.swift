@@ -22,23 +22,41 @@ class CKRecordContext: NSObject {
         self.database = database
         super.init()
     }
-    func ckRecord(recordType:String)->CKRecord
+    func insertNewCKRecord(recordType:String)->CKRecord
     {
         var ckRecord:CKRecord = CKRecord(recordType: recordType)
         self.modifiedRecords.append(ckRecord)
         return ckRecord
     }
-    func ckRecord(recordType:String,recordID:CKRecordID)->CKRecord
+    func insertNewCKRecord(recordType:String,recordID:CKRecordID)->CKRecord
     {
         var ckRecord:CKRecord = CKRecord(recordType: recordType, recordID: recordID)
         self.modifiedRecords.append(ckRecord)
         return ckRecord
     }
-    func ckRecord(recordType:String,recordZoneID:CKRecordZoneID)->CKRecord
+    func insertNewCKRecord(recordType:String,recordZoneID:CKRecordZoneID)->CKRecord
     {
         var ckRecord:CKRecord = CKRecord(recordType: recordType, zoneID: recordZoneID)
         self.modifiedRecords.append(ckRecord)
         return ckRecord
+    }
+    
+    func fetchCKRecord(recordID:CKRecordID)->CKRecord?
+    {
+        var fetchRecordsOperation:CKFetchRecordsOperation = CKFetchRecordsOperation(recordIDs: [recordID])
+        fetchRecordsOperation.database = self.database
+        var record:CKRecord?
+        fetchRecordsOperation.fetchRecordsCompletionBlock = ({(recordsWithRecordIDs,error) -> Void in
+            
+            if error == nil
+            {
+               record = recordsWithRecordIDs[recordID] as? CKRecord
+            }
+        })
+        self.operationQueue.addOperation(fetchRecordsOperation)
+        self.operationQueue.waitUntilAllOperationsAreFinished()
+        
+        return record
     }
     
     func deleteRecord(record:CKRecord)
