@@ -89,7 +89,8 @@ class CKRecordContext: NSObject {
             
             if error == nil
             {
-               record = recordsWithRecordIDs[recordID] as? CKRecord
+                record = recordsWithRecordIDs[recordID] as? CKRecord
+                self.modifiedRecords.append(record!)
             }
         })
         self.operationQueue.addOperation(fetchRecordsOperation)
@@ -98,17 +99,31 @@ class CKRecordContext: NSObject {
         return record
     }
     
+    /**
+    Deletes the record from the CKDatabase
+    
+    :param: record   Record that is to be deleted from the database
+    */
     func deleteRecord(record:CKRecord)
     {
         self.deletedRecords.append(record.recordID)
     }
     
+    /**
+    Resets the context removing all the pending deletions, insertions and modifications.
+    */
     func reset()
     {
         self.modifiedRecords.removeAll(keepCapacity: false)
         self.deletedRecords.removeAll(keepCapacity: false)
     }
     
+    /**
+    Commits all the changes to CKDatabase.
+    
+    :param: error   A error pointer
+    
+    */
     func save(error:NSErrorPointer)
     {
         self.ckModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: self.modifiedRecords, recordIDsToDelete: self.deletedRecords)
