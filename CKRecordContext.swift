@@ -15,7 +15,13 @@ class CKRecordContext: NSObject {
     var ckModifyRecordsOperation:CKModifyRecordsOperation?
     var deletedRecords:Array<CKRecordID> = Array<CKRecordID>()
     var modifiedRecords:Array<CKRecord> = Array<CKRecord>()
+    var database:CKDatabase?
     
+    init(database:CKDatabase?) {
+        
+        self.database = database
+        super.init()
+    }
     func ckRecord(recordType:String)->CKRecord
     {
         var ckRecord:CKRecord = CKRecord(recordType: recordType)
@@ -43,6 +49,7 @@ class CKRecordContext: NSObject {
     func save(error:NSErrorPointer)
     {
         self.ckModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: self.modifiedRecords, recordIDsToDelete: self.deletedRecords)
+        self.ckModifyRecordsOperation?.database = self.database
         self.ckModifyRecordsOperation?.modifyRecordsCompletionBlock = ({(savedRecords, deletedRecordsIDs, operationError) -> Void in
             
             if operationError != nil
