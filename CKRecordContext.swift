@@ -16,7 +16,7 @@ class CKRecordContext: NSObject {
     var deletedRecords:Array<CKRecordID> = Array<CKRecordID>()
     var modifiedRecords:Array<CKRecord> = Array<CKRecord>()
     var database:CKDatabase?
-    var recordsZone:CKRecordZone?
+    var recordZone:CKRecordZone?
     
     /**
     Initializes the context with an instance of CKDatabase.
@@ -24,9 +24,10 @@ class CKRecordContext: NSObject {
     :param: database   Database to use for performing operations in the context. Private or Public
     
     */
-    init(database:CKDatabase?) {
+    init(database:CKDatabase?,recordZone:CKRecordZone) {
         
         self.database = database
+        self.recordZone = recordZone
         super.init()
     }
     
