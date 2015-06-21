@@ -16,6 +16,25 @@ class CKRecordContext: NSObject {
     var deletedRecords:Array<CKRecordID> = Array<CKRecordID>()
     var modifiedRecords:Array<CKRecord> = Array<CKRecord>()
     
+    func ckRecord(recordType:String)->CKRecord
+    {
+        var ckRecord:CKRecord = CKRecord(recordType: recordType)
+        self.modifiedRecords.append(ckRecord)
+        return ckRecord
+    }
+    func ckRecord(recordType:String,recordID:CKRecordID)->CKRecord
+    {
+        var ckRecord:CKRecord = CKRecord(recordType: recordType, recordID: recordID)
+        self.modifiedRecords.append(ckRecord)
+        return ckRecord
+    }
+    func ckRecord(recordType:String,recordZoneID:CKRecordZoneID)->CKRecord
+    {
+        var ckRecord:CKRecord = CKRecord(recordType: recordType, zoneID: recordZoneID)
+        self.modifiedRecords.append(ckRecord)
+        return ckRecord
+    }
+    
     func addRecord(record:CKRecord)
     {
         self.modifiedRecords.append(record)
