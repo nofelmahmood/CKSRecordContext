@@ -134,6 +134,39 @@ class CKRecordContext: NSObject {
     }
     
     /**
+    Fetches instances of CKRecords from CKDatabase with the given recordType, predicate and sortDescriptors
+    
+    :param: recordType       RecordType used to fetch records of the type.
+    :param: predicate        A Predicate to filter the records.
+    :param: sortDescriptors  An array of NSSortDescriptor to use to sort the records.
+    
+    :returns: An array of CKRecords.
+    */
+    
+    func fetchCKRecords(recordType:String,predicate:NSPredicate,sortDescriptors:[NSSortDescriptor])->[CKRecord]?
+    {
+        var query:CKQuery = CKQuery(recordType: recordType, predicate: predicate)
+        var queryOperation:CKQueryOperation = CKQueryOperation(query: query)
+        query.sortDescriptors = sortDescriptors
+        var fetchedRecords:Array<CKRecord> = Array<CKRecord>()
+        queryOperation.queryCompletionBlock = ({(queryCursor,error) -> Void in
+            
+            if error != nil
+            {
+                
+            }
+        })
+        
+        queryOperation.recordFetchedBlock = ({(ckRecord) -> Void in
+
+            fetchedRecords.append(ckRecord)
+        })
+        self.operationQueue.addOperation(queryOperation)
+        self.operationQueue.waitUntilAllOperationsAreFinished()
+        return fetchedRecords
+    }
+    
+    /**
     Deletes the record from the CKDatabase
     
     :param: record   Record that is to be deleted from the database
