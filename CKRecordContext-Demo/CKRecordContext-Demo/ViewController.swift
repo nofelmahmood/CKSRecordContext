@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         anotherckRecord.setObject("daghaRora", forKey: "MAMia")
         
         var error:NSErrorPointer = nil
-        
+
+        ckRecordContext.deleteRecord(recordID: ckRecord.recordID)
         ckRecordContext.save { (error) -> (Void) in
             
             if error != nil
