@@ -52,10 +52,10 @@ Check out the sample iOS demo app.
 ## Installation
 `CocoaPods` is the recommended way of adding CKSIncrementalStore to your project.
 
-You want to to add pod `'CKRecordContext', '~> 0.1'` similar to the following to your Podfile:
+You want to to add pod `'CKSRecordContext', '~> 0.1'` similar to the following to your Podfile:
 ```
 target 'MyApp' do
-  pod 'CKRecordContext', '~> 0.1'
+  pod 'CKSRecordContext', '~> 0.1'
 end
 ```
 
