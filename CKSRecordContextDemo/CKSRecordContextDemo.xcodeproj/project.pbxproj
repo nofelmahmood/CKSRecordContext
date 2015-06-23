@@ -14,7 +14,7 @@
 		10471C441B3901C2007AA343 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10471C431B3901C2007AA343 /* Images.xcassets */; };
 		10471C471B3901C2007AA343 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10471C451B3901C2007AA343 /* LaunchScreen.xib */; };
 		10471C531B3901C2007AA343 /* CKSRecordContextDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10471C521B3901C2007AA343 /* CKSRecordContextDemoTests.swift */; };
-		10471C5D1B390213007AA343 /* CKSRecordContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10471C5C1B390213007AA343 /* CKSRecordContext.swift */; };
+		10471C9A1B397AEF007AA343 /* CKSRecordContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10471C991B397AEF007AA343 /* CKSRecordContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		10471C4C1B3901C2007AA343 /* CKSRecordContextDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CKSRecordContextDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10471C511B3901C2007AA343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10471C521B3901C2007AA343 /* CKSRecordContextDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKSRecordContextDemoTests.swift; sourceTree = "<group>"; };
-		10471C5C1B390213007AA343 /* CKSRecordContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CKSRecordContext.swift; path = ../../CKSRecordContext.swift; sourceTree = "<group>"; };
+		10471C991B397AEF007AA343 /* CKSRecordContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CKSRecordContext.swift; path = ../../CKSRecordContext/CKSRecordContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 		10471C361B3901C2007AA343 /* CKSRecordContextDemo */ = {
 			isa = PBXGroup;
 			children = (
-				10471C5C1B390213007AA343 /* CKSRecordContext.swift */,
+				10471C991B397AEF007AA343 /* CKSRecordContext.swift */,
 				10471C391B3901C2007AA343 /* AppDelegate.swift */,
 				10471C3E1B3901C2007AA343 /* ViewController.swift */,
 				10471C401B3901C2007AA343 /* Main.storyboard */,
@@ -220,7 +220,7 @@
 			files = (
 				10471C3F1B3901C2007AA343 /* ViewController.swift in Sources */,
 				10471C3A1B3901C2007AA343 /* AppDelegate.swift in Sources */,
-				10471C5D1B390213007AA343 /* CKSRecordContext.swift in Sources */,
+				10471C9A1B397AEF007AA343 /* CKSRecordContext.swift in Sources */,
 				10471C3D1B3901C2007AA343 /* CKSRecordContextDemo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
