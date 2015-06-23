@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.social_media_url = "https://twitter.com/NofelMahmood"
   s.source   = { :git => 'https://github.com/CloudKitSpace/CKSRecordContext.git', :tag => '0.1' }
 
-  s.source_files = 'CKSIncrementalStore/CKSIncrementalStore.swift'
+  s.source_files = 'CKSRecordContext/CKSRecordContext.swift'
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
   s.framework  = 'CloudKit'
