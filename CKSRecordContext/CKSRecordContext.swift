@@ -6,7 +6,6 @@
 //
 //
 
-import UIKit
 import CloudKit
 
 class CKSRecordContext: NSObject {
