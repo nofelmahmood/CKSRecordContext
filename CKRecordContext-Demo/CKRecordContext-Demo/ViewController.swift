@@ -14,8 +14,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var recordContext = CKRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase)
+        var ckRecordContext:CKRecordContext = CKRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase, recordZone: nil)
         
+        var ckRecord = ckRecordContext.insertNewCKRecord("Nofel")
+        ckRecord.setObject("Nofel", forKey: "DaghaRora")
+        
+        var anotherckRecord = ckRecordContext.insertNewCKRecord("Nofel")
+        anotherckRecord.setObject("daghaRora", forKey: "MAMia")
+        
+        var error:NSErrorPointer = nil
+        
+        ckRecordContext.save { (error) -> (Void) in
+            
+            if error != nil
+            {
+                print("Saved Successfully")
+            }
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }

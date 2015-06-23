@@ -24,7 +24,7 @@ class CKRecordContext: NSObject {
     :param: database   Database to use for performing operations in the context. Private or Public
     
     */
-    init(database:CKDatabase?,recordZone:CKRecordZone) {
+    init(database:CKDatabase?,recordZone:CKRecordZone?) {
         
         self.database = database
         self.recordZone = recordZone
@@ -171,11 +171,21 @@ class CKRecordContext: NSObject {
     
     :param: record   Record that is to be deleted from the database
     */
-    func deleteRecord(record:CKRecord)
+    func deleteRecord(#record:CKRecord)
     {
         self.deletedRecords.append(record.recordID)
     }
     
+    /**
+    Deletes the record from the CKDatabase
+    
+    :param: recordID   CKRecordID to use to delete the associated record.
+    
+    */
+    func deleteRecord(#recordID:CKRecordID)
+    {
+        self.deletedRecords.append(recordID)
+    }
     /**
     Resets the context removing all the pending deletions, insertions and modifications.
     */
@@ -191,19 +201,18 @@ class CKRecordContext: NSObject {
     :param: error   A error pointer
     
     */
-    func save(error:NSErrorPointer)
+    func save(completion:(error:NSError!) ->())
     {
         self.ckModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: self.modifiedRecords, recordIDsToDelete: self.deletedRecords)
         self.ckModifyRecordsOperation?.database = self.database
         self.ckModifyRecordsOperation?.modifyRecordsCompletionBlock = ({(savedRecords, deletedRecordsIDs, operationError) -> Void in
             
-            if operationError != nil
-            {
-                error.memory = operationError
-            }
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                
+                completion(error: operationError)
+            })
         })
         self.operationQueue.addOperation(self.ckModifyRecordsOperation!)
-        self.operationQueue.waitUntilAllOperationsAreFinished()
     }
     
 }
