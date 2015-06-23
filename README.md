@@ -1,4 +1,4 @@
-# CKRecordContext
+# CKSRecordContext
 
 A dead simple way of `Inserting`, `Modifying` and `Deleting` records from the CloudKit Databases.
 
@@ -7,12 +7,12 @@ A dead simple way of `Inserting`, `Modifying` and `Deleting` records from the Cl
 A CKRecordContext object holds all the new records, any changes to fetched records and deletions until you call `save()` on an instance of it. It only then conveys the changes to the CloudKit Database.
 
 ```swift
-var ckRecordContext:CKRecordContext = CKRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase, recordZone: nil)
+var cksRecordContext:CKSRecordContext = CKRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase, recordZone: nil)
 ```
 ### Creating a new CKRecord
 
 ```swift
-var ckRecord = ckRecordContext.insertNewCKRecord("NewRecordType")
+var ckRecord = cksRecordContext.insertNewCKRecord("NewRecordType")
 ```
 
 ### Modifying a CKRecord
@@ -22,14 +22,14 @@ Any CKRecords you create using methods of CKRecordContext are monitored by it.
 ### Deleting a CKRecord
 
 ```swift
-var ckRecord = ckRecordContext.insertNewCKRecord("NewRecordType")
+var ckRecord = cksRecordContext.insertNewCKRecord("NewRecordType")
 ckRecordContext.deleteRecord(record: ckRecord)
 ```
 
 OR 
 
 ```swift
-var ckRecord = ckRecordContext.insertNewCKRecord("NewRecordType")
+var ckRecord = cksRecordContext.insertNewCKRecord("NewRecordType")
 ckRecordContext.deleteRecord(recordID: ckRecord.recordID)
 ```
 
@@ -38,7 +38,7 @@ ckRecordContext.deleteRecord(recordID: ckRecord.recordID)
 Its a one liner !
 
 ```swift
-ckRecordContext.save { (error) -> (Void) in
+cksRecordContext.save { (error) -> (Void) in
   if error != nil
     {
         print("Saved Successfully")
@@ -63,10 +63,10 @@ Then run a `[sudo] pod install` inside your terminal, or from CocoaPods.app.
 
 
 ## Credits
-CKRecordContext was created by [Nofel Mahmood](http://twitter.com/NofelMahmood)
+CKSRecordContext was created by [Nofel Mahmood](http://twitter.com/NofelMahmood)
 
 ## Contact 
 Follow Nofel Mahmood on [Twitter](http://twitter.com/NofelMahmood) and [GitHub](http://github.com/nofelmahmood) or email him at nofelmehmood@gmail.com
 
 ## License
-CKRecordContext is available under the MIT license. See the LICENSE file for more info.
+CKSRecordContext is available under the MIT license. See the LICENSE file for more info.
