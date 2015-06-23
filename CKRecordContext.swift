@@ -82,23 +82,19 @@ class CKRecordContext: NSObject {
     
     :returns: An instance of CKRecord
     */
-    func fetchCKRecord(recordID:CKRecordID)->CKRecord?
+    func fetchCKRecord(recordID:CKRecordID,completion:(record:CKRecord?,error:NSError!) ->())
     {
         var fetchRecordsOperation:CKFetchRecordsOperation = CKFetchRecordsOperation(recordIDs: [recordID])
         fetchRecordsOperation.database = self.database
         var record:CKRecord?
         fetchRecordsOperation.fetchRecordsCompletionBlock = ({(recordsWithRecordIDs,error) -> Void in
             
-            if error == nil
-            {
-                record = recordsWithRecordIDs[recordID] as? CKRecord
-                self.modifiedRecords.append(record!)
-            }
+            record = recordsWithRecordIDs[recordID] as? CKRecord
+            completion(record: record, error: error)
+
         })
         self.operationQueue.addOperation(fetchRecordsOperation)
-        self.operationQueue.waitUntilAllOperationsAreFinished()
         
-        return record
     }
     
     /**
@@ -110,17 +106,16 @@ class CKRecordContext: NSObject {
     :returns: An array of CKRecords.
     */
 
-    func fetchCKRecords(recordType:String,predicate:NSPredicate)->[CKRecord]?
+    func fetchCKRecords(recordType:String,predicate:NSPredicate,completion:(results:Array<AnyObject>?,error:NSError!) ->())
     {
         var query:CKQuery = CKQuery(recordType: recordType, predicate: predicate)
         var queryOperation:CKQueryOperation = CKQueryOperation(query: query)
+        queryOperation.database = self.database
         var fetchedRecords:Array<CKRecord> = Array<CKRecord>()
         queryOperation.queryCompletionBlock = ({(queryCursor, error) -> Void in
             
-            if error != nil
-            {
-                
-            }
+            self.modifiedRecords.extend(fetchedRecords)
+            completion(results: fetchedRecords, error: error)
         })
         queryOperation.recordFetchedBlock = ({(ckRecord) -> Void in
             
@@ -128,10 +123,7 @@ class CKRecordContext: NSObject {
         })
         
         self.operationQueue.addOperation(queryOperation)
-        self.operationQueue.waitUntilAllOperationsAreFinished()
-        
-        return fetchedRecords
-    }
+}
     
     /**
     Fetches instances of CKRecords from CKDatabase with the given recordType, predicate and sortDescriptors
@@ -143,7 +135,7 @@ class CKRecordContext: NSObject {
     :returns: An array of CKRecords.
     */
     
-    func fetchCKRecords(recordType:String,predicate:NSPredicate,sortDescriptors:[NSSortDescriptor])->[CKRecord]?
+    func fetchCKRecords(recordType:String,predicate:NSPredicate,sortDescriptors:[NSSortDescriptor],completion:(results:Array<AnyObject>?,error:NSError!) ->())
     {
         var query:CKQuery = CKQuery(recordType: recordType, predicate: predicate)
         var queryOperation:CKQueryOperation = CKQueryOperation(query: query)
@@ -151,10 +143,8 @@ class CKRecordContext: NSObject {
         var fetchedRecords:Array<CKRecord> = Array<CKRecord>()
         queryOperation.queryCompletionBlock = ({(queryCursor,error) -> Void in
             
-            if error != nil
-            {
-                
-            }
+            self.modifiedRecords.extend(fetchedRecords)
+            completion(results: fetchedRecords, error: error)
         })
         
         queryOperation.recordFetchedBlock = ({(ckRecord) -> Void in
@@ -162,8 +152,6 @@ class CKRecordContext: NSObject {
             fetchedRecords.append(ckRecord)
         })
         self.operationQueue.addOperation(queryOperation)
-        self.operationQueue.waitUntilAllOperationsAreFinished()
-        return fetchedRecords
     }
     
     /**
@@ -207,10 +195,7 @@ class CKRecordContext: NSObject {
         self.ckModifyRecordsOperation?.database = self.database
         self.ckModifyRecordsOperation?.modifyRecordsCompletionBlock = ({(savedRecords, deletedRecordsIDs, operationError) -> Void in
             
-            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                
                 completion(error: operationError)
-            })
         })
         self.operationQueue.addOperation(self.ckModifyRecordsOperation!)
     }
