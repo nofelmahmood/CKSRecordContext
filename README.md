@@ -37,11 +37,8 @@ ckRecordContext.deleteRecord(recordID: ckRecord.recordID)
 
 ```swift
 func fetchCKRecord(recordID:CKRecordID,completion:(record:CKRecord?,error:NSError!) ->())
-
 func fetchCKRecords(recordType:String,predicate:NSPredicate,completion:(results:Array<AnyObject>?,error:NSError!) ->())
-
 func fetchCKRecords(recordType:String,predicate:NSPredicate,sortDescriptors:[NSSortDescriptor],completion:(results:Array<AnyObject>?,error:NSError!) ->())
-
 ```
 
 ### Saving the Insertions, Modifications and Deletions to server.
