@@ -61,7 +61,7 @@ cksRecordContext.save { (error) -> (Void) in
 Check out the sample iOS demo app.
 
 ## Installation
-`CocoaPods` is the recommended way of adding CKSIncrementalStore to your project.
+`CocoaPods` is the recommended way of adding CKSRecordContext to your project.
 
 You want to to add pod `'CKSRecordContext', '~> 0.1'` similar to the following to your Podfile:
 ```
