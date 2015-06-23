@@ -1,15 +1,15 @@
 //
-//  CKRecordContext_DemoTests.swift
-//  CKRecordContext-DemoTests
+//  CKSRecordContextDemoTests.swift
+//  CKSRecordContextDemoTests
 //
-//  Created by Nofel Mahmood on 21/06/2015.
+//  Created by Nofel Mahmood on 23/06/2015.
 //  Copyright (c) 2015 CloudKitSpace. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class CKRecordContext_DemoTests: XCTestCase {
+class CKSRecordContextDemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

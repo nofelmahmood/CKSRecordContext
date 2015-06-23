@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2F94334F-329A-443B-A317-D48D6B6D4525</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CKRecordContext</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9122354B6ED771117E3EC909619464DCD364C034</key>
+		<string>https://github.com/CloudKitSpace/CKRecordContext.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CKRecordContext.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9122354B6ED771117E3EC909619464DCD364C034</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CloudKitSpace/CKRecordContext.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9122354B6ED771117E3EC909619464DCD364C034</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9122354B6ED771117E3EC909619464DCD364C034</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CKRecordContext</string>
+		</dict>
+	</array>
+</dict>
+</plist>

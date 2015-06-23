@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CKSRecordContext-Demo.xcscheme</key>
+		<key>CKSRecordContextDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>105595291B36DB6100A685E0</key>
+		<key>10471C331B3901C2007AA343</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1055953E1B36DB6100A685E0</key>
+		<key>10471C4B1B3901C2007AA343</key>
 		<dict>
 			<key>primary</key>
 			<true/>
