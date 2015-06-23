@@ -1,10 +1,10 @@
 # CKSRecordContext
 
-A dead simple way of `Inserting`, `Modifying` and `Deleting` records from the CloudKit Databases.
+A dead simple way of `Fetching`, `Inserting`, `Modifying` and `Deleting` records from the CloudKit Databases.
 
 ## How To Use
 
-A CKRecordContext object holds all the new records, any changes to fetched records and deletions until you call `save()` on an instance of it. It only then conveys the changes to the CloudKit Database.
+A CKRecordContext object holds all the new records, any changes and deletions to them until you call `save()` on an instance of it. It only then conveys the changes to the CloudKit Database.
 
 ```swift
 var cksRecordContext:CKSRecordContext = CKRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase, recordZone: nil)
@@ -31,6 +31,17 @@ OR
 ```swift
 var ckRecord = cksRecordContext.insertNewCKRecord("NewRecordType")
 ckRecordContext.deleteRecord(recordID: ckRecord.recordID)
+```
+
+### Fetching Records
+
+```swift
+func fetchCKRecord(recordID:CKRecordID,completion:(record:CKRecord?,error:NSError!) ->())
+
+func fetchCKRecords(recordType:String,predicate:NSPredicate,completion:(results:Array<AnyObject>?,error:NSError!) ->())
+
+func fetchCKRecords(recordType:String,predicate:NSPredicate,sortDescriptors:[NSSortDescriptor],completion:(results:Array<AnyObject>?,error:NSError!) ->())
+
 ```
 
 ### Saving the Insertions, Modifications and Deletions to server.
