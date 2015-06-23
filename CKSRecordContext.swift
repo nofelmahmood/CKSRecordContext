@@ -9,7 +9,7 @@
 import UIKit
 import CloudKit
 
-class CKRecordContext: NSObject {
+class CKSRecordContext: NSObject {
    
     var operationQueue:NSOperationQueue = NSOperationQueue()
     var ckModifyRecordsOperation:CKModifyRecordsOperation?

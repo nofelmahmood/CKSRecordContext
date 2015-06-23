@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CKRecordContext-Demo/CKRecordContext-Demo.xcodeproj">
+      location = "group:/Users/MBP/Dropbox/Code/Organizations/CloudKitSpace/CKRecordContext/CKRecordContext-Demo/CKSRecordContext-Demo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CKRecordContext.swift">
+      location = "group:/Users/MBP/Dropbox/Code/Organizations/CloudKitSpace/CKRecordContext/CKSRecordContext.swift">
    </FileRef>
 </Workspace>

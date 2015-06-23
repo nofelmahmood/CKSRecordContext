@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10471C271B38C712007AA343 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10471C261B38C712007AA343 /* CloudKit.framework */; };
+		10471C2A1B39008C007AA343 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10471C291B39008C007AA343 /* CloudKit.framework */; };
 		105595301B36DB6100A685E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055952F1B36DB6100A685E0 /* AppDelegate.swift */; };
 		105595321B36DB6100A685E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105595311B36DB6100A685E0 /* ViewController.swift */; };
 		105595351B36DB6100A685E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105595331B36DB6100A685E0 /* Main.storyboard */; };
 		105595371B36DB6100A685E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105595361B36DB6100A685E0 /* Images.xcassets */; };
 		1055953A1B36DB6100A685E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 105595381B36DB6100A685E0 /* LaunchScreen.xib */; };
-		105595461B36DB6100A685E0 /* CKRecordContext_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105595451B36DB6100A685E0 /* CKRecordContext_DemoTests.swift */; };
-		105595501B36DB8200A685E0 /* CKRecordContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055954F1B36DB8200A685E0 /* CKRecordContext.swift */; };
+		105595461B36DB6100A685E0 /* CKSRecordContext_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105595451B36DB6100A685E0 /* CKSRecordContext_DemoTests.swift */; };
+		105595501B36DB8200A685E0 /* CKSRecordContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055954F1B36DB8200A685E0 /* CKSRecordContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,18 +29,19 @@
 
 /* Begin PBXFileReference section */
 		10471C251B38C6CA007AA343 /* CKRecordContext-Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "CKRecordContext-Demo.entitlements"; sourceTree = "<group>"; };
-		10471C261B38C712007AA343 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		1055952A1B36DB6100A685E0 /* CKRecordContext-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CKRecordContext-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10471C281B390089007AA343 /* CKSRecordContext-Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "CKSRecordContext-Demo.entitlements"; sourceTree = "<group>"; };
+		10471C291B39008C007AA343 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1055952A1B36DB6100A685E0 /* CKSRecordContext-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CKSRecordContext-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1055952E1B36DB6100A685E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1055952F1B36DB6100A685E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105595311B36DB6100A685E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		105595341B36DB6100A685E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		105595361B36DB6100A685E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		105595391B36DB6100A685E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1055953F1B36DB6100A685E0 /* CKRecordContext-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CKRecordContext-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1055953F1B36DB6100A685E0 /* CKSRecordContext-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CKSRecordContext-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		105595441B36DB6100A685E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		105595451B36DB6100A685E0 /* CKRecordContext_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordContext_DemoTests.swift; sourceTree = "<group>"; };
-		1055954F1B36DB8200A685E0 /* CKRecordContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CKRecordContext.swift; path = ../../CKRecordContext.swift; sourceTree = "<group>"; };
+		105595451B36DB6100A685E0 /* CKSRecordContext_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKSRecordContext_DemoTests.swift; sourceTree = "<group>"; };
+		1055954F1B36DB8200A685E0 /* CKSRecordContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CKSRecordContext.swift; path = ../../CKSRecordContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10471C271B38C712007AA343 /* CloudKit.framework in Frameworks */,
+				10471C2A1B39008C007AA343 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +66,10 @@
 		105595211B36DB6000A685E0 = {
 			isa = PBXGroup;
 			children = (
-				10471C261B38C712007AA343 /* CloudKit.framework */,
+				10471C291B39008C007AA343 /* CloudKit.framework */,
+				10471C281B390089007AA343 /* CKSRecordContext-Demo.entitlements */,
 				1055952C1B36DB6100A685E0 /* CKRecordContext-Demo */,
-				105595421B36DB6100A685E0 /* CKRecordContext-DemoTests */,
+				105595421B36DB6100A685E0 /* CKSRecordContext-DemoTests */,
 				1055952B1B36DB6100A685E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,8 +77,8 @@
 		1055952B1B36DB6100A685E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1055952A1B36DB6100A685E0 /* CKRecordContext-Demo.app */,
-				1055953F1B36DB6100A685E0 /* CKRecordContext-DemoTests.xctest */,
+				1055952A1B36DB6100A685E0 /* CKSRecordContext-Demo.app */,
+				1055953F1B36DB6100A685E0 /* CKSRecordContext-DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				10471C251B38C6CA007AA343 /* CKRecordContext-Demo.entitlements */,
-				1055954F1B36DB8200A685E0 /* CKRecordContext.swift */,
+				1055954F1B36DB8200A685E0 /* CKSRecordContext.swift */,
 				1055952F1B36DB6100A685E0 /* AppDelegate.swift */,
 				105595311B36DB6100A685E0 /* ViewController.swift */,
 				105595331B36DB6100A685E0 /* Main.storyboard */,
@@ -104,12 +106,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		105595421B36DB6100A685E0 /* CKRecordContext-DemoTests */ = {
+		105595421B36DB6100A685E0 /* CKSRecordContext-DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				105595451B36DB6100A685E0 /* CKRecordContext_DemoTests.swift */,
+				105595451B36DB6100A685E0 /* CKSRecordContext_DemoTests.swift */,
 				105595431B36DB6100A685E0 /* Supporting Files */,
 			);
+			name = "CKSRecordContext-DemoTests";
 			path = "CKRecordContext-DemoTests";
 			sourceTree = "<group>";
 		};
@@ -124,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		105595291B36DB6100A685E0 /* CKRecordContext-Demo */ = {
+		105595291B36DB6100A685E0 /* CKSRecordContext-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 105595491B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKRecordContext-Demo" */;
+			buildConfigurationList = 105595491B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKSRecordContext-Demo" */;
 			buildPhases = (
 				105595261B36DB6100A685E0 /* Sources */,
 				105595271B36DB6100A685E0 /* Frameworks */,
@@ -136,14 +139,14 @@
 			);
 			dependencies = (
 			);
-			name = "CKRecordContext-Demo";
+			name = "CKSRecordContext-Demo";
 			productName = "CKRecordContext-Demo";
-			productReference = 1055952A1B36DB6100A685E0 /* CKRecordContext-Demo.app */;
+			productReference = 1055952A1B36DB6100A685E0 /* CKSRecordContext-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1055953E1B36DB6100A685E0 /* CKRecordContext-DemoTests */ = {
+		1055953E1B36DB6100A685E0 /* CKSRecordContext-DemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1055954C1B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKRecordContext-DemoTests" */;
+			buildConfigurationList = 1055954C1B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKSRecordContext-DemoTests" */;
 			buildPhases = (
 				1055953B1B36DB6100A685E0 /* Sources */,
 				1055953C1B36DB6100A685E0 /* Frameworks */,
@@ -154,9 +157,9 @@
 			dependencies = (
 				105595411B36DB6100A685E0 /* PBXTargetDependency */,
 			);
-			name = "CKRecordContext-DemoTests";
+			name = "CKSRecordContext-DemoTests";
 			productName = "CKRecordContext-DemoTests";
-			productReference = 1055953F1B36DB6100A685E0 /* CKRecordContext-DemoTests.xctest */;
+			productReference = 1055953F1B36DB6100A685E0 /* CKSRecordContext-DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 105595251B36DB6000A685E0 /* Build configuration list for PBXProject "CKRecordContext-Demo" */;
+			buildConfigurationList = 105595251B36DB6000A685E0 /* Build configuration list for PBXProject "CKSRecordContext-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -196,8 +199,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				105595291B36DB6100A685E0 /* CKRecordContext-Demo */,
-				1055953E1B36DB6100A685E0 /* CKRecordContext-DemoTests */,
+				105595291B36DB6100A685E0 /* CKSRecordContext-Demo */,
+				1055953E1B36DB6100A685E0 /* CKSRecordContext-DemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,7 +232,7 @@
 			files = (
 				105595321B36DB6100A685E0 /* ViewController.swift in Sources */,
 				105595301B36DB6100A685E0 /* AppDelegate.swift in Sources */,
-				105595501B36DB8200A685E0 /* CKRecordContext.swift in Sources */,
+				105595501B36DB8200A685E0 /* CKSRecordContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105595461B36DB6100A685E0 /* CKRecordContext_DemoTests.swift in Sources */,
+				105595461B36DB6100A685E0 /* CKSRecordContext_DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +249,7 @@
 /* Begin PBXTargetDependency section */
 		105595411B36DB6100A685E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 105595291B36DB6100A685E0 /* CKRecordContext-Demo */;
+			target = 105595291B36DB6100A685E0 /* CKSRecordContext-Demo */;
 			targetProxy = 105595401B36DB6100A685E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -358,12 +361,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "CKRecordContext-Demo/CKRecordContext-Demo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "CKSRecordContext-Demo.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CKRecordContext-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CKSRecordContext-Demo";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -372,12 +375,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "CKRecordContext-Demo/CKRecordContext-Demo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "CKSRecordContext-Demo.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CKRecordContext-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CKSRecordContext-Demo";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -396,7 +399,7 @@
 				);
 				INFOPLIST_FILE = "CKRecordContext-DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CKSRecordContext-DemoTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CKRecordContext-Demo.app/CKRecordContext-Demo";
 			};
 			name = Debug;
@@ -411,7 +414,7 @@
 				);
 				INFOPLIST_FILE = "CKRecordContext-DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CKSRecordContext-DemoTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CKRecordContext-Demo.app/CKRecordContext-Demo";
 			};
 			name = Release;
@@ -419,7 +422,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		105595251B36DB6000A685E0 /* Build configuration list for PBXProject "CKRecordContext-Demo" */ = {
+		105595251B36DB6000A685E0 /* Build configuration list for PBXProject "CKSRecordContext-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				105595471B36DB6100A685E0 /* Debug */,
@@ -428,7 +431,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		105595491B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKRecordContext-Demo" */ = {
+		105595491B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKSRecordContext-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1055954A1B36DB6100A685E0 /* Debug */,
@@ -437,7 +440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1055954C1B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKRecordContext-DemoTests" */ = {
+		1055954C1B36DB6100A685E0 /* Build configuration list for PBXNativeTarget "CKSRecordContext-DemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1055954D1B36DB6100A685E0 /* Debug */,

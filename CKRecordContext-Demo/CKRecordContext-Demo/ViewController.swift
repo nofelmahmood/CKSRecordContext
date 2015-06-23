@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var ckRecordContext:CKRecordContext = CKRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase, recordZone: nil)
+        var ckRecordContext:CKSRecordContext = CKSRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase, recordZone: nil)
         
         var ckRecord = ckRecordContext.insertNewCKRecord("Nofel")
         ckRecord.setObject("Nofel", forKey: "DaghaRora")
