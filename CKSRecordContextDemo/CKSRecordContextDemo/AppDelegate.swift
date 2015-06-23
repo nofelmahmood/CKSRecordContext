@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CloudKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var context:CKSRecordContext = CKSRecordContext(database: CKContainer.defaultContainer().privateCloudDatabase, recordZone: nil)
+        
+        var record:CKRecord = context.insertNewCKRecord("Task")
+        record.setObject("Programming", forKey: "Name")
+        
+        context.save { (error) -> () in
+            
+            if error == nil
+            {
+                println("Saved Successfully")
+            }
+        }
         return true
     }
 
